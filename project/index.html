@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Система управління Автомайстернею</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .table td .btn { margin-right: 4px; }
+        .form-actions .btn { margin-right: 6px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/cars">Система управління Автомайстернею</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="tab-btn" data-hash="#/cars"><a href="#/cars">Машини</a></li>
+                <li class="tab-btn" data-hash="#/amechanics"><a href="#/amechanics">Механіки</a></li>
+                <li class="tab-btn" data-hash="#/orders"><a href="#/orders">Замовлення</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div id="app"></div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>

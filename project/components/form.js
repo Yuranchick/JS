@@ -35,8 +35,12 @@ export function renderForm(container, { title, fields, values, onSubmit, onCance
         input.name = field.name;
         input.className = "form-control";
         input.required = field.required !== false;
-        if (values && values[field.name] != null) input.value = values[field.name];
-
+        if (values && values[field.name] != null) {
+            const val = String(values[field.name]).trim();
+            input.value = field.type === "date" && val.split("-")[0].length === 2
+                ? val.split("-").reverse().join("-")
+                : val;
+        }
         group.append(label, input);
         form.append(group);
     }
